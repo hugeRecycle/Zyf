@@ -1,0 +1,140 @@
+.banner-box .banner-title .txt img {
+    width: 1.47rem;
+}
+.itemBlock {
+    padding: 0 1.4rem 0 .4rem;
+    max-width: 14.4rem;
+	margin: 0 auto;
+    display: flex;
+}
+.left-box {
+    width: 2rem;
+    border-right: .01rem solid rgba(0,0,0,0.15);
+    padding-top: .6rem;
+}
+.left-box li {
+    font-size: .2rem;
+    font-family: Avenir-Medium;
+    font-weight: 500;
+    color: rgba(0,0,0,.65);
+    padding: .2rem 0;
+    border-bottom: .01rem solid rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+.left-box li.active,
+.left-box li:hover {
+    color: #0C3375;
+    font-family: Avenir-Heavy;
+    font-weight: 800;
+    position: relative;
+}
+.left-box li.active {
+    padding-left: .12rem;
+}
+.left-box li.active::after {
+    position:absolute;
+	left:0;
+	top: 50%;
+    transform: translateY(-50%);
+	width: .02rem;
+	height: .27rem;
+	content:"";
+	background:#E58600
+}
+.left-box li:last-child {
+    border-color: transparent;
+}
+.publications-list {
+    flex: 1;
+    padding: .4rem;
+    padding-right: 0;
+}
+.publications-list li {
+	padding: .43rem 0;
+	border-bottom: .01rem dashed rgba(0,0,0,0.2);
+}
+.publications-list li:first-child {
+	padding-top: .03rem;
+}
+.publications-list li a {
+	text-decoration: none;
+}
+.txt {
+    padding-top: .29rem;
+}
+.img-box {
+	border-radius: .08rem;
+	box-shadow: 0px .08rem .2rem 0px rgba(0,0,0,0.15);
+	position: relative;
+	padding: .03rem;
+	border-radius: .08rem;
+	margin-left: .43rem;
+    float: right;
+}
+.img-box img {
+	width: 4.54rem;
+	height: auto;
+}
+.img-box .date {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: .22rem;
+	background-color: #003479;
+	padding: 0 .07rem;
+	height: .59rem;
+	line-height: .65rem;
+	color: #fff;
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+	border-top-left-radius: .08rem;
+	border-bottom-right-radius: .08rem;
+}
+.publications-list .txt h6 {
+	font-size: .22rem;
+	color: #0C3375;
+	line-height: .3rem;
+	font-family: Avenir-MediumOblique;
+}
+.publications-list .txt h6 span {
+	margin-right: .24rem;
+}
+.publications-list .txt h6 img {
+	width: .28rem;
+	height: .28rem;
+	margin-left: .16rem;
+	vertical-align: middle;
+}
+.publications-list .txt p {
+	margin-top: .16rem;
+	font-size: .24rem;
+	color: rgba(0,0,0,.85);
+	line-height: .33rem;
+	font-family: Avenir-Medium;
+	font-weight: 500;
+}
+.publications-list .txt p:last-child {
+	font-size: .2rem;
+	color: rgba(0,0,0,.65);
+	line-height: .27rem;
+	font-family: Avenir-Roman;
+}
+.hideMenu {
+	display: none;
+}
+#submenu {
+    margin-top: -0.1rem;
+}
+#submenu li {
+    border-bottom: 0;
+    font-size: .16rem;
+    color: rgba(0,0,0,0.45);
+    font-size: Avenir-Roman;
+    padding: .07rem 0;
+}
+#submenu li.subActive,
+#submenu li:hover {
+	color: #0C3375;
+    font-family: Avenir-Heavy;
+    font-weight: 800;
+}

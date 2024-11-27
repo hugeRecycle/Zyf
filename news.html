@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+		<title>News</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/common.css" />
+		<link rel="stylesheet" type="text/css" href="./css/news.css" />
+		<script src="./js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<header class="header-box">
+			<div class="logo-box">
+                <a href="https://www.westlake.edu.cn/">
+                    <img src="./img/icon_headerLogo_l.png" title="西湖大学" />
+                </a>
+				<div class="line"></div>
+				<a>
+                    <img src="./img/icon_headerLogo_r.png" title="西湖大学" />
+                </a>
+            </div>
+			<div class="r-box">
+				<nav class="menu-box">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li><a href="publications.html">Publications</a></li>
+						<li class="active"><a href="news.html">News</a></li>
+						<li><a href="joinus.html">Join us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="banner-box">
+			<img src="./images/news/banner.png" />
+			<div class="banner-title">
+				<div class="txt">
+					<span>News</span>
+					<img src="./images/news/icon_bannerLabel.png" >
+				</div>
+			</div>
+		</section>
+		<main class="main-box">
+			<div class="itemBlock">
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<div class="img-box">
+								<img src="./images/news/img_1.png" />
+							</div>
+							<h6>Yefeng Zheng, a prominent scientist at Tencent, joined Westlake University full-time to focus on medical artificial...</h6>
+							<p>2024-8-15</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="img-box">
+								<img src="./images/news/img_1.png" />
+							</div>
+							<h6>Yefeng Zheng, a prominent scientist at Tencent, joined Westlake University full-time to focus on medical artificial...</h6>
+							<p>2024-8-15</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="img-box">
+								<img src="./images/news/img_1.png" />
+							</div>
+							<h6>Yefeng Zheng, a prominent scientist at Tencent, joined Westlake University full-time to focus on medical artificial...</h6>
+							<p>2024-8-15</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<div class="img-box">
+								<img src="./images/news/img_1.png" />
+							</div>
+							<h6>Yefeng Zheng, a prominent scientist at Tencent, joined Westlake University full-time to focus on medical artificial...</h6>
+							<p>2024-8-15</p>
+						</a>
+					</li>
+				</ul>
+				<div class="paginator-box">
+					<ul>
+						<li><img src="./img/icon_paginator_l.png" /></li>
+						<li class="active">1</li>
+						<li>2</li>
+						<li><img src="./img/icon_paginator_more.png" /></li>
+						<li>5</li>
+						<li><img src="./img/icon_paginator_r.png" /></li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<footer class="footer-box">
+			<div class="logo-box">
+				<img src="./img/icon_footerLogo.png" alt="">
+			</div>
+			<p class="address"><span>Address:</span> Yunchuang Gallium Valley 6-304, No. 428 Zhiqiang Road, Sandun Town, Xihu District, Hangzhou, Zhejiang Province</p>
+			<p class="filings">
+				<span><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18025489号</a></span>
+				<span>浙公安备33010602007514号</span>
+				<span>Copyright © Westlake University. All Rights Reserved</span>
+			</p>
+		</footer>
+		<script>
+			$(function(){
+				var nextEl, prevEl;
+				function setRem(designSize) {
+					let html = document.documentElement;
+					let width = html.clientWidth;
+					if (designSize == 3.75) {
+						width = width >= 375 ? 375 : width;
+					}
+					if (designSize == 14.4) {
+						width = width >= 1440 ? 1440 : width;
+					}
+			     	html.style.fontSize = width / designSize + 'px'; // 设计稿宽度为1440px，那么1rem=100px，故除以14.4
+				}
+				document.body.classList.add('pc-class');
+				setRem(14.4);
+				window.onresize = function() {
+					setRem(14.4);
+				};
+			});
+		</script>
+	</body>
+</html>
