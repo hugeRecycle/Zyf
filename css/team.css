@@ -178,3 +178,46 @@
 .itemBlock:last-child .container-box {
 	padding-bottom: .38rem;
 }
+.itemBlock6 .article-container table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	box-shadow: 0 .08rem .25rem 0 rgba(0,0,0,0.1);
+}
+.itemBlock6 .article-container tr {
+	text-align: left;
+}
+.itemBlock6 .article-container th,
+.itemBlock6 .article-container td {
+	width: 47%;
+	line-height: .32rem;
+    font-size: .22rem;
+    color: rgba(0, 0, 0, .85);
+    font-family: Avenir-Roman;
+	line-height: .68rem;
+	padding: 0 .24rem;
+	border-right: .015rem solid #CCCCCC;
+}
+.itemBlock6 .article-container th:first-child,
+.itemBlock6 .article-container td:first-child {
+	width: 20.5%;
+}
+.itemBlock6 .article-container th:last-child,
+.itemBlock6 .article-container td:last-child {
+	width: 32.5%;
+}
+.itemBlock6 .article-container th {
+	font-size: .24rem;
+    font-family: Avenir-Medium;
+    font-weight: 500;
+	color: #0C3375;
+	background-color: #F3F5F7;
+	line-height: .7rem;
+}
+.itemBlock6 .article-container td {
+	border-top: .015rem solid #CCCCCC;
+}
+.itemBlock6 .article-container th:last-child
+.itemBlock6 .article-container td:last-child {
+	border-right-color: transparent;
+}

@@ -6,13 +6,14 @@
     max-width: 14.4rem;
 	margin: 0 auto;
     display: flex;
+    min-height: 6rem;
 }
 .left-box {
-    width: 2rem;
+    min-width: 2.5rem;
     border-right: .01rem solid rgba(0,0,0,0.15);
     padding-top: .6rem;
 }
-.left-box li {
+#parentmenu>div {
     font-size: .2rem;
     font-family: Avenir-Medium;
     font-weight: 500;
@@ -21,43 +22,57 @@
     border-bottom: .01rem solid rgba(0,0,0,0.15);
     cursor: pointer;
 }
-.left-box li.active,
-.left-box li:hover {
+#parentmenu>div.active,
+#parentmenu>div:hover {
     color: #0C3375;
     font-family: Avenir-Heavy;
     font-weight: 800;
     position: relative;
 }
-.left-box li.active {
+#parentmenu>div.active {
     padding-left: .12rem;
 }
-.left-box li.active::after {
+#parentmenu>div.active::after {
     position:absolute;
 	left:0;
-	top: 50%;
+	top: .315rem;
     transform: translateY(-50%);
 	width: .02rem;
 	height: .27rem;
 	content:"";
 	background:#E58600
 }
-.left-box li:last-child {
+#parentmenu>div:last-child {
     border-color: transparent;
 }
+#parentmenu>div .childmenu {
+	margin-top: .09rem;
+}
+#parentmenu>div .childmenu span {
+	font-size: .16rem;
+    color: rgba(0,0,0,0.45);
+    font-family: Avenir-Roman;
+    padding: .07rem 0;
+	display: block;
+}
+#parentmenu>div .childmenu span.subActive,
+#parentmenu>div .childmenu span:hover {
+	color: #0C3375;
+    font-family: Avenir-Heavy;
+    font-weight: 800;
+}
+
+
 .publications-list {
     flex: 1;
     padding: .4rem;
     padding-right: 0;
 }
-.publications-list li {
-	padding: .43rem 0;
+.publications-list .item-box {
+	    padding-bottom: .43rem;
+    margin-bottom: .43rem;
 	border-bottom: .01rem dashed rgba(0,0,0,0.2);
-}
-.publications-list li:first-child {
-	padding-top: .03rem;
-}
-.publications-list li a {
-	text-decoration: none;
+cursor: pointer;
 }
 .txt {
     padding-top: .29rem;
@@ -70,6 +85,7 @@
 	border-radius: .08rem;
 	margin-left: .43rem;
     float: right;
+display: flex;
 }
 .img-box img {
 	width: 4.54rem;
@@ -119,22 +135,7 @@
 	line-height: .27rem;
 	font-family: Avenir-Roman;
 }
-.hideMenu {
-	display: none;
-}
-#submenu {
-    margin-top: -0.1rem;
-}
-#submenu li {
-    border-bottom: 0;
-    font-size: .16rem;
-    color: rgba(0,0,0,0.45);
-    font-size: Avenir-Roman;
-    padding: .07rem 0;
-}
-#submenu li.subActive,
-#submenu li:hover {
-	color: #0C3375;
-    font-family: Avenir-Heavy;
-    font-weight: 800;
+
+.hide {
+	display: none !important;
 }

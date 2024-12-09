@@ -35,20 +35,20 @@
 	margin-left: .24rem;
 	background-color: #E89725;
 }
-.txt {
+.article-container .txt {
     margin-top: .3rem;
     padding-top: .32rem;
     border-top: .015rem dashed rgba(0,0,0,.2);
     color: rgba(0,0,0,.85);
 }
-.txt p {
+.article-container .txt p {
     margin-top: .24rem;
     font-size: .24rem;
     font-family: Avenir-Medium;
 	font-weight: 500;
     line-height: .33rem;
 }
-.txt p span {
+.article-container .txt p span {
     font-size: .22rem;
     font-family: Avenir-Roman;
 }
