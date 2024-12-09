@@ -1,0 +1,66 @@
+.banner-box .banner-title .txt img {
+    width: .68rem;
+}
+.itemBlock {
+    padding: .8rem 1.4rem;
+    max-width: 14.4rem;
+	margin: 0 auto;
+    background-color: #fff;
+}
+.back-box {
+    display: flex;
+    align-items: center;
+    height: .25rem;
+    font-size: .18rem;
+    color: rgba(0,0,0,0.65);
+    font-family: Avenir-Medium;
+    font-weight: 500;
+    margin-bottom: .4rem;
+}
+.back-box img {
+    width: .2rem;
+    display: block;
+    margin-right: .08rem;
+}
+.back-box a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.65);
+}
+.back-box span:nth-child(3) {
+    margin: 0 .12rem;
+}
+.back-box span:last-child {
+    color: #E58811;
+}
+.itemBlock h5 {
+    line-height: .41rem;
+	color: rgba(0,0,0,0.85);
+	font-size: .3rem;
+	font-family: Avenir-Medium;
+	font-weight: 500;
+}
+.itemBlock h6 {
+    margin-top: .16rem;
+    line-height: .27rem;
+	color: #F18D00;
+	font-size: .2rem;
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+}
+.itemBlock .article-container {
+    margin-top: .16rem;
+    padding-top: .14rem;
+    border-top: .01rem solid rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.itemBlock .article-container p {
+    margin-top: .26rem;
+    line-height: .3rem;
+	color: rgba(0,0,0,0.65);
+	font-size: .22rem;
+	font-family: Avenir-Roman;
+}
+.itemBlock .article-container img {
+    margin: .46rem auto;
+    display: block;
+}

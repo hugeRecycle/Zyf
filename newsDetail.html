@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+		<title>News</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/common.css" />
+		<link rel="stylesheet" type="text/css" href="./css/newsDetail.css" />
+		<script src="./js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<header class="header-box">
+			<div class="logo-box">
+                <a href="https://www.westlake.edu.cn/">
+                    <img src="./img/icon_headerLogo_l.png" title="西湖大学" />
+                </a>
+				<div class="line"></div>
+				<a>
+                    <img src="./img/icon_headerLogo_r.png" title="西湖大学" />
+                </a>
+            </div>
+			<div class="r-box">
+				<nav class="menu-box">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li><a href="publications.html">Publications</a></li>
+						<li class="active"><a href="news.html">News</a></li>
+						<li><a href="joinus.html">Join us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="banner-box">
+			<img src="./images/news/banner.png" />
+			<div class="banner-title">
+				<div class="txt">
+					<span>News</span>
+					<img src="./images/news/icon_bannerLabel.png" >
+				</div>
+			</div>
+		</section>
+		<main class="main-box">
+			<div class="itemBlock">
+				<div class="back-box">
+					<img src="./img/icon_back.png" />
+					<a href="javascript:history.go(-1);">Back</a>
+					<span>&gt;</span>
+					<span>Content</span>
+				</div>
+				<div>
+					<h5>Yefeng Zheng, a prominent scientist at Tencent, joined Westlake University full-time to focus on Medical Artificial Intelligence</h5>
+					<h6>2024-08-15</h6>
+					<div class="article-container">
+						<p>On the last day of July 2024, 48-year-old Zheng Yefeng stood on the podium of a university classroom for the first time as a professor.</p>
+						<p>This was the third day of the inaugural West Lake University Artificial Intelligence Summer Public Course. As one of the morning's main speakers, dressed in a gray polo shirt and casual canvas shoes, Zheng Yefeng arrived early at the venue, took over from Professor Cheng Tao from University College London, opened his PPT on the big screen, and quietly waited for the clock to strike the hour of the class.</p>
+						<p>On the last working day of the previous week, he had just completed his resignation procedures in Shenzhen, bidding a hasty farewell to his "old employer" Tencent, where he had spent six years. He put a period to his identity as a "Tencent Distinguished Scientist and Director of the Tianyan Lab," and also said goodbye to his nearly 20-year career in the industry across China and the United States.</p>
+						<p>Joining West Lake University full-time, Zheng Yefeng, an IEEE Fellow, AIMBE Fellow, and a scientist in medical artificial intelligence, was appointed as a professor in the School of Engineering and will establish a Medical Artificial Intelligence Laboratory here.</p>
+						<p>A well-known figure in the industry, Zheng Yefeng is set to start anew from West Lake as a "newcomer" in academia.</p>
+						<img src="./images/news/img_1.png" />
+						<p>On the last day of July 2024, 48-year-old Zheng Yefeng stood on the podium of a university classroom for the first time as a professor.</p>
+						<p>This was the third day of the inaugural West Lake University Artificial Intelligence Summer Public Course. As one of the morning's main speakers, dressed in a gray polo shirt and casual canvas shoes, Zheng Yefeng arrived early at the venue, took over from Professor Cheng Tao from University College London, opened his PPT on the big screen, and quietly waited for the clock to strike the hour of the class.</p>
+						<p>On the last working day of the previous week, he had just completed his resignation procedures in Shenzhen, bidding a hasty farewell to his "old employer" Tencent, where he had spent six years. He put a period to his identity as a "Tencent Distinguished Scientist and Director of the Tianyan Lab," and also said goodbye to his nearly 20-year career in the industry across China and the United States.</p>
+						<p>Joining West Lake University full-time, Zheng Yefeng, an IEEE Fellow, AIMBE Fellow, and a scientist in medical artificial intelligence, was appointed as a professor in the School of Engineering and will establish a Medical Artificial Intelligence Laboratory here.</p>
+						<p>A well-known figure in the industry, Zheng Yefeng is set to start anew from West Lake as a "newcomer" in academia.</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer-box">
+			<div class="logo-box">
+				<img src="./img/icon_footerLogo.png" alt="">
+			</div>
+			<p class="address"><span>Address:</span> Yunchuang Gallium Valley 6-304, No. 428 Zhiqiang Road, Sandun Town, Xihu District, Hangzhou, Zhejiang Province</p>
+			<p class="filings">
+				<span><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18025489号</a></span>
+				<span>浙公安备33010602007514号</span>
+				<span>Copyright © Westlake University. All Rights Reserved</span>
+			</p>
+		</footer>
+		<script>
+			$(function(){
+				var nextEl, prevEl;
+				function setRem(designSize) {
+					let html = document.documentElement;
+					let width = html.clientWidth;
+					if (designSize == 3.75) {
+						width = width >= 375 ? 375 : width;
+					}
+					if (designSize == 14.4) {
+						width = width >= 1440 ? 1440 : width;
+					}
+			     	html.style.fontSize = width / designSize + 'px'; // 设计稿宽度为1440px，那么1rem=100px，故除以14.4
+				}
+				document.body.classList.add('pc-class');
+				setRem(14.4);
+				window.onresize = function() {
+					setRem(14.4);
+				};
+			});
+		</script>
+	</body>
+</html>

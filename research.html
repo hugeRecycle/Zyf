@@ -90,133 +90,117 @@
 						<div class="splitline"></div>
 					</div>
 					<div class="article-container">
-						<table>
-							<caption>Computing Resource</caption>
-							<thead>
-								<tr>
-									<th>Node Type</th>
-									<th>Number of Nodes</th>
-									<th>Node Configuration</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>4卡V100</td>
-									<td>10</td>
-									<td>
-										<table>
-											<tr>
-												<td>CPU</td>
-												<td>Intel(R) Xeon(R) Gold 6240R * 2</td>
-											</tr>
-											<tr>
-												<td>GPU</td>
-												<td>Tesla V100-SXM2-32GB * 4</td>
-											</tr>
-											<tr>
-												<td>内存</td>
-												<td>376GB</td>
-											</tr>
-											<tr>
-												<td>NVME</td>
-												<td>1.8TB</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td>8卡V100</td>
-									<td>10</td>
-									<td>
-										<table>
-											<tr>
-												<td>CPU</td>
-												<td>Intel(R) Xeon(R) Gold 6240R * 2</td>
-											</tr>
-											<tr>
-												<td>GPU</td>
-												<td>Tesla V100-SXM2-32GB * 8</td>
-											</tr>
-											<tr>
-												<td>内存</td>
-												<td>503GB</td>
-											</tr>
-											<tr>
-												<td>NVME</td>
-												<td>1.8TB</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td>8卡A100 40G</td>
-									<td>10</td>
-									<td>
-										<table>
-											<tr>
-												<td>CPU</td>
-												<td>AMD EPYC 7742 64-Core * 2</td>
-											</tr>
-											<tr>
-												<td>GPU</td>
-												<td>NVIDIA A100-SXM4-40GB* 4</td>
-											</tr>
-											<tr>
-												<td>内存</td>
-												<td>755GB</td>
-											</tr>
-											<tr>
-												<td>NVME</td>
-												<td>3.5TB</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td>8卡A100 80G</td>
-									<td>40</td>
-									<td>
-										<table>
-											<tr>
-												<td>CPU</td>
-												<td>Intel(R) Xeon(R) Platinum 8358 * 2</td>
-											</tr>
-											<tr>
-												<td>GPU</td>
-												<td>NVIDIA A100-SXM4-80GB</td>
-											</tr>
-											<tr>
-												<td>内存</td>
-												<td>1007GB</td>
-											</tr>
-											<tr>
-												<td>NVME</td>
-												<td>7.0TB</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<table>
-							<caption>Storage Resources</caption>
-							<thead>
-								<tr>
-									<th>Storage Type</th>
-									<th>Storage System</th>
-									<th>Storage Size</th>
-									<th>Storage Performance</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Computational Storage</td>
-									<td>lustre</td>
-									<td>211T</td>
-									<td>W: 40GB/S、R: 40GB/s</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="table">
+							<div class="title">Computing Resource</div>
+							<div class="row-label">
+								<div class="col_1">Node Type</div>
+								<div class="col_2">Number of Nodes</div>
+								<div class="col_3">Node Configuration</div>
+							</div>
+							<div class="row-con">
+								<div class="col_1">4卡V100</div>
+								<div class="col_2">10</div>
+								<div class="col_3">
+									<div class="sub-row-con">
+										<div>CPU</div>
+										<div>Intel(R) Xeon(R) Gold 6240R * 2</div>
+									</div>
+									<div class="sub-row-con">
+										<div>GPU</div>
+										<div>Tesla V100-SXM2-32GB * 4</div>
+									</div>
+									<div class="sub-row-con">
+										<div>内存</div>
+										<div>376GB</div>
+									</div>
+									<div class="sub-row-con">
+										<div>NVME</div>
+										<div>1.8TB</div>
+									</div>
+								</div>
+							</div>
+							<div class="row-con">
+								<div class="col_1">8卡V100</div>
+								<div class="col_2">10</div>
+								<div class="col_3">
+									<div class="sub-row-con">
+										<div>CPU</div>
+										<div>Intel(R) Xeon(R) Gold 6240R * 2</div>
+									</div>
+									<div class="sub-row-con">
+										<div>GPU</div>
+										<div>Tesla V100-SXM2-32GB * 8</div>
+									</div>
+									<div class="sub-row-con">
+										<div>内存</div>
+										<div>503GB</div>
+									</div>
+									<div class="sub-row-con">
+										<div>NVME</div>
+										<div>1.8TB</div>
+									</div>
+								</div>
+							</div>
+							<div class="row-con">
+								<div class="col_1">8卡A100 40G</div>
+								<div class="col_2">10</div>
+								<div class="col_3">
+									<div class="sub-row-con">
+										<div>CPU</div>
+										<div>AMD EPYC 7742 64-Core * 2</div>
+									</div>
+									<div class="sub-row-con">
+										<div>GPU</div>
+										<div>NVIDIA A100-SXM4-40GB* 4</div>
+									</div>
+									<div class="sub-row-con">
+										<div>内存</div>
+										<div>755GB</div>
+									</div>
+									<div class="sub-row-con">
+										<div>NVME</div>
+										<div>3.5TB</div>
+									</div>
+								</div>
+							</div>
+							<div class="row-con">
+								<div class="col_1">8卡A100 80G</div>
+								<div class="col_2">40</div>
+								<div class="col_3">
+									<div class="sub-row-con">
+										<div>CPU</div>
+										<div>Intel(R) Xeon(R) Platinum 8358 * 2</div>
+									</div>
+									<div class="sub-row-con">
+										<div>GPU</div>
+										<div>NVIDIA A100-SXM4-80GB</div>
+									</div>
+									<div class="sub-row-con">
+										<div>内存</div>
+										<div>1007GB</div>
+									</div>
+									<div class="sub-row-con">
+										<div>NVME</div>
+										<div>7.0TB</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="table">
+							<div class="title">Storage Resources</div>
+							<div class="row-label">
+								<div class="col_1">Storage Type</div>
+								<div class="col_2">Storage System</div>
+								<div class="col_4">Storage Size</div>
+								<div class="col_3">Storage Performance</div>
+							</div>
+							<div class="row-con">
+								<div class="col_1">Computational Storage</div>
+								<div class="col_2">lustre</div>
+								<div class="col_4">211T</div>
+								<div class="col_3">W: 40GB/S、R: 40GB/s</div>
+							</div>
+						</div>	
 					</div>
 				</div>	
 			</div>
@@ -251,6 +235,10 @@
 				window.onresize = function() {
 					setRem(14.4);
 				};
+				document.querySelectorAll('.table').forEach(function(div, index) {
+					$('.table:nth-child(' + (index+1) + ') .row-con .col_1').css('height', (div.children[2].clientHeight / 100) + 'rem')
+					$('.table:nth-child(' + (index+1) + ') .row-con .col_2').css('height', (div.children[2].clientHeight / 100) + 'rem')
+				});
 			});
 		</script>
 	</body>

@@ -45,80 +45,48 @@
 		<main class="main-box">
 			<div class="itemBlock">
 				<div class="left-box">
-					<ul id="parentmenu">
-						<li class="active" idx="0">ALL</li>
-						<li idx="1">Journal Paper</li>
-						<li idx="2">Conference Paper</li>
-					</ul>
-					<ul id="submenu" class="hideMenu">
-						<li>CVPR/ICCV/ECCV</li>
-						<li>MICCAI/IPMI</li>
-						<li>ACL/EMNLP/NAACL</li>
-						<li>NeurIPS/ICLR</li>
-						<li>AAAI/IJCAI</li>
-						<li>KDD/WWW/CIKM</li>
-						<li>ACM Multimedia</li>
-					</ul>
+					<div id="parentmenu">
+						<div>
+							<span>ALL</span> 
+						</div>
+						<div>
+							<span>Journal Paper</span> 
+						</div>
+						<div>
+							<span>Conference Paper</span>
+							<div class="childmenu">
+								<span>CVPR/ICCV/ECCV</span>
+								<span>MICCAI/IPMI</span>
+								<span>ACL/EMNLP/NAACL</span>
+								<span>NeurIPS/ICLR</span>
+								<span>AAAI/IJCAI</span>
+								<span>KDD/WWW/CIKM</span>
+								<span>ACM Multimedia</span>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="publications-list">
-					<ul id="list1">
-						<li>
-							<a href="javascript:;">
-								<div class="img-box">
-									<img src="./images/publications/img_1.png" />
-									<div class="date">Oct 05, 2024</div>
-								</div>
-								<div class="txt">
-									<h6>
-										<span>NeurIPS 2024, Poster</span>
-										<img src="./img/pdf.png" />
-										<img src="./img/gitHub.png" />
-									</h6>
-									<p>Samba: Severity-aware Recurrent Modeling for Cross-domain Medical Image Grading</p>
-									<p>Qi Bi · Jingjun Yi · Hao Zheng · Wei Ji · Haolan Zhan · Yawen Huang · Yuexiang Li · Yefeng Zheng</p>
-								</div>
-								<div class="clean"></div>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<div class="img-box">
-									<img src="./images/publications/img_1.png" />
-									<div class="date">Oct 05, 2024</div>
-								</div>
-								<div class="txt">
-									<h6>
-										<span>NeurIPS 2024, Poster</span>
-										<img src="./img/pdf.png" />
-										<img src="./img/gitHub.png" />
-									</h6>
-									<p>Samba: Severity-aware Recurrent Modeling for Cross-domain Medical Image Grading</p>
-									<p>Qi Bi · Jingjun Yi · Hao Zheng · Wei Ji · Haolan Zhan · Yawen Huang · Yuexiang Li · Yefeng Zheng</p>
-								</div>
-								<div class="clean"></div>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<div class="img-box">
-									<img src="./images/publications/img_1.png" />
-									<div class="date">Oct 05, 2024</div>
-								</div>
-								<div class="txt">
-									<h6>
-										<span>NeurIPS 2024, Poster</span>
-										<img src="./img/pdf.png" />
-										<img src="./img/gitHub.png" />
-									</h6>
-									<p>Samba: Severity-aware Recurrent Modeling for Cross-domain Medical Image Grading</p>
-									<p>Qi Bi · Jingjun Yi · Hao Zheng · Wei Ji · Haolan Zhan · Yawen Huang · Yuexiang Li · Yefeng Zheng</p>
-								</div>
-								<div class="clean"></div>
-							</a>
-						</li>
-					</ul>
-					<ul class="list2"></ul>
-					<ul class="list3"></ul>
+					<div class="item-box" data-type="Journal Paper">
+						<div class="img-box">
+							<img src="./images/publications/img_1.png" />
+							<div class="date">Oct 05, 2024</div>
+						</div>
+						<div class="txt">
+							<h6>
+								<span>NeurIPS 2024, Poster</span>
+								<img src="./img/pdf.png" />
+								<img src="./img/gitHub.png" />
+							</h6>
+							<p>Samba: Severity-aware Recurrent Modeling for Cross-domain Medical Image Grading</p>
+							<p>Qi Bi · Jingjun Yi · Hao Zheng · Wei Ji · Haolan Zhan · Yawen Huang · Yuexiang Li · Yefeng Zheng</p>
+						</div>
+						<div class="clean"></div>
+					</div>
+					<div class="item-box" data-type="Journal Paper">111</div>
+					<div class="item-box" data-type="CVPR/ICCV/ECCV">111</div>
+					<div class="item-box" data-type="CVPR/ICCV/ECCV">112</div>
+					<div class="item-box" data-type="ACM Multimedia">1134</div>
 				</div>
 			</div>
 		</main>
@@ -152,18 +120,122 @@
 				window.onresize = function() {
 					setRem(14.4);
 				};
-				$('#parentmenu li').click(function() {
-					$('#parentmenu li').each(function() {
-						$(this).removeClass('active');
-					});
-					let idx = $(this).attr('idx');
-					$(this).toggleClass('active');
-					if (idx == 2) {
-						$('#submenu').css('display','block');
-					} else {
-						$('#submenu').css('display','none');
+
+				$('#parentmenu>div').each(function() {
+					$(this).data("data-type", $(this).children("span").text());
+					if ($(this).children('div').length) {
+						$(this).children('div').each(function() {
+							$(this).find("span").each(function() {
+								$(this).data("data-type", $(this).text());
+							})
+						})
+						$(this).children('div').hide();
 					}
 				});
+				
+				let selectedParentType;
+				$('#parentmenu>div').click(function() {
+					let curSelectedParentType = $(this).data('data-type');
+					if (curSelectedParentType == selectedParentType) {
+						return
+					}
+					selectedParentType = curSelectedParentType;
+					$('#parentmenu>div').each(function() {
+						$(this).removeClass('active');
+						if ($(this).children('div').length) {
+							$(this).children('div').hide();
+						}
+					});
+					$(this).toggleClass('active');
+
+					// 有子标签
+					if ($(this).children('div').length) {
+						$(this).children('div').show();
+						$(this).children('div').first().children().first().click()
+					} else {
+						$(this).children('div').hide();
+						$('.publications-list>div').each(function() {
+							let listType = $(this).data('type');
+							$(this).addClass('hide');
+							if (curSelectedParentType == 'ALL') {
+								$(this).removeClass('hide');
+							} else {
+								if (curSelectedParentType == listType) {
+									$(this).removeClass('hide');
+								}
+							}	
+						});
+					}
+				});
+				let selectedSubType;
+				$('#parentmenu>div .childmenu span').click(function() {
+					let curSelectedSubType = $(this).data('data-type');
+					if (curSelectedSubType == selectedSubType) {
+						return
+					}
+					selectedSubType = curSelectedSubType;
+					$('#parentmenu>div .childmenu span').each(function() {
+						$(this).removeClass('subActive');
+					});
+					$(this).toggleClass('subActive');
+					$('.publications-list>div').each(function() {
+						let listType = $(this).data('type');
+						$(this).addClass('hide');
+						if (curSelectedSubType == listType) {
+							$(this).removeClass('hide');
+						}
+					});
+				});
+				document.querySelector('#parentmenu div:first-child').click();
+				setTimeout(()=>{
+					$('#parentmenu>div').each(function() {
+						let parentType = $(this).data('data-type');
+						let parenIndex = 0;
+						// 有子标签
+						if ($(this).children('div').length) {
+							$(this).children('div').each(function() {
+								$(this).find("span").each(function() {
+									let childType = $(this).data('data-type');
+									let childIndex = 0;
+									$('.publications-list>div').each(function() {
+										let listType = $(this).data('type');
+										if (childType == listType) {
+											childIndex++;
+										}
+									})
+									if (childIndex > 0) {
+										$(this).html($(this).text() + ' (' + childIndex +')');
+									}
+									parenIndex += childIndex;
+								})
+							})
+						} else {
+							$('.publications-list>div').each(function() {
+								let listType = $(this).data('type');
+								if (parentType == 'ALL') {
+									parenIndex = $('.publications-list>div').length;
+								} else {
+									if (parentType == listType) {
+										parenIndex++;
+									}
+								}
+							})
+						}
+						if (parenIndex > 0) {
+							$(this).children('span').html($(this).children('span').text() + ' (' + parenIndex +')')
+						}
+					});
+				},500)
+				$('.item-image-paper').on('click', function(event) {
+                    event.stopPropagation();
+                    let url = $(this).data('url');
+                    window.open(url, '_blank')
+                });
+                $('.item-image-code').on('click', function(event) {
+                    event.stopPropagation();
+                    let url = $(this).data('url');
+                    window.open(url, '_blank')
+                });
 			});
 		</script>
 	</body>
